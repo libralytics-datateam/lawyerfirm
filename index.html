@@ -15,6 +15,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Tailwind CSS CDN with CI Configuration (preflight disabled to preserve design system) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: {
+        preflight: false,
+      },
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0b192c',
+              dark: '#07101e',
+              surface: '#11233d',
+              gold: '#c5a880',
+              'gold-light': '#e0cca7',
+              'gold-dark': '#a0845a',
+              cream: '#f9f8f5',
+              sand: '#f0ede6'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -77,7 +103,7 @@
       <ul class="nav-menu" id="navMenu">
         <li><a href="#profile" class="nav-link" data-i18n="navProfile">Firm Profile</a></li>
         <li><a href="#practices" class="nav-link" data-i18n="navPractices">Practices</a></li>
-        <li><a href="#csr" class="nav-link" style="color: var(--color-csr-green); font-weight: 700;" data-i18n="navCSR">Single Mother Support (CSR)</a></li>
+        <li><a href="#csr" class="nav-link" data-i18n="navCSR">Single Mother Support (CSR)</a></li>
         <li><a href="#attorneys" class="nav-link" data-i18n="navAttorneys">Attorneys</a></li>
         <li><a href="#offices" class="nav-link" data-i18n="navOffices">Offices</a></li>
         <li><a href="#contact" class="nav-link" data-i18n="navContact">Contact</a></li>
@@ -91,7 +117,13 @@
           <button class="lang-btn" data-lang="th" onclick="setLanguage('th')">ไทย</button>
         </div>
         <a href="#contact" class="btn btn-primary btn-consultation" data-i18n="btnConsultation">Free Consultation</a>
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">☰</button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
       </div>
     </div>
   </header>
@@ -101,7 +133,7 @@
     <div class="container hero-grid">
       <div class="hero-content">
         <div class="hero-flags-badge">
-          <span class="flag-icon">🇹🇭 🇯🇵</span>
+          <span class="flag-pill"><span class="badge-country">TH</span><span class="badge-separator">•</span><span class="badge-country">JP</span></span>
           <span data-i18n="heroTag">Thailand - Japan Strategic Legal Bridge</span>
         </div>
         <h1 class="hero-title">
@@ -114,14 +146,22 @@
         <!-- Key Credentials -->
         <div class="hero-credentials-row">
           <div class="credential-pill" onclick="openBarCardModal()" style="cursor: pointer;">
-            <div class="cred-icon">⚖️</div>
+            <div class="cred-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v18M6 8l6-2 6 2M3 13l3-5 3 5a3 3 0 0 1-6 0zM15 13l3-5 3 5a3 3 0 0 1-6 0zM4 21h16"/>
+              </svg>
+            </div>
             <div class="cred-text">
               <h4 data-i18n="credThai">Licensed Thai Bar Counsel</h4>
               <p data-i18n="credThaiSub">Lifetime Member Lic. No. 1437/2541</p>
             </div>
           </div>
           <div class="credential-pill">
-            <div class="cred-icon">🏛️</div>
+            <div class="cred-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2L2 7h20L12 2z"/>
+              </svg>
+            </div>
             <div class="cred-text">
               <h4 data-i18n="credJp">Registered Japanese Counsel</h4>
               <p data-i18n="credJpSub">Matsusaka, Mie Office Advisory</p>
@@ -149,13 +189,17 @@
               <div class="tag-title" data-i18n="heroTagTitle">Lawyer Firm The Table — Bangkok HQ</div>
               <div class="tag-sub" data-i18n="heroTagSub">Ekkamai 2 Alley, Watthana, Bangkok</div>
             </div>
-            <div style="font-size: 1.4rem;">🏛️</div>
+            <div class="tag-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2L2 7h20L12 2z"/>
+              </svg>
+            </div>
           </div>
         </div>
         <div class="hero-float-badge">
-          <span>🇹🇭</span>
+          <span class="badge-pill-sm">TH</span>
           <span data-i18n="heroBadgeBilateral">Bilateral Legal Excellence</span>
-          <span>🇯🇵</span>
+          <span class="badge-pill-sm">JP</span>
         </div>
       </div>
     </div>
@@ -226,14 +270,20 @@
     <div class="container">
       <div class="section-header">
         <div class="section-tag" data-i18n="practiceTag">Areas of Legal Practice</div>
-        <h2 class="section-title" data-i18n="practiceTitle">Comprehensive Cross-Border Legal Solutions</h2>
+        <h2 class="section-title" data-i18n="practiceTitle">Cross-Border Legal Solutions</h2>
         <p class="section-subtitle" data-i18n="practiceSubtitle">Bridging corporate investment and sensitive human legal matters with equal rigor and discretion.</p>
       </div>
 
       <div class="practices-grid">
         <!-- 1. Business Consulting & IP -->
         <div class="practice-card">
-          <div class="practice-icon">📊</div>
+          <div class="practice-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+          </div>
           <h3 class="practice-title" data-i18n="p1Title">Business Consulting & Market Entry</h3>
           <p class="practice-desc" data-i18n="p1Desc">Strategic counsel for Japanese firms entering Thailand. Full assistance for company incorporation, Foreign Business License (FBL), BOI promotion, and corporate compliance.</p>
           <ul class="practice-features-list">
@@ -246,7 +296,11 @@
 
         <!-- 2. Alimony & Emotional Distress (Specialization) -->
         <div class="practice-card" style="border-color: var(--color-accent-gold); box-shadow: var(--shadow-subtle);">
-          <div class="practice-icon" style="background: rgba(197, 168, 128, 0.2); color: var(--color-primary-navy);">⚖️</div>
+          <div class="practice-icon" style="background: rgba(197, 168, 128, 0.2); color: var(--color-primary-navy);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v18M6 8l6-2 6 2M3 13l3-5 3 5a3 3 0 0 1-6 0zM15 13l3-5 3 5a3 3 0 0 1-6 0zM4 21h16"/>
+            </svg>
+          </div>
           <h3 class="practice-title" data-i18n="p2Title">Alimony & Emotional Distress Claims</h3>
           <p class="practice-desc" data-i18n="p2Desc">Specialized legal enforcement of alimony, child custody, and damages for emotional distress arising from international marriages between Thai and Japanese nationals.</p>
           <ul class="practice-features-list">
@@ -254,12 +308,25 @@
             <li data-i18n="p2f2">Japanese Family Court Proceedings</li>
             <li data-i18n="p2f3">Consensual & Contentious Divorce Settlements</li>
           </ul>
-          <a href="#csr" class="practice-link" style="color: var(--color-csr-green); font-weight: 700;">Learn About Pro Bono CSR Support →</a>
+          <a href="#csr" class="practice-link" style="font-weight: 700;">Learn About Pro Bono CSR Support →</a>
         </div>
 
         <!-- 3. Blockchain & Cryptocurrency -->
         <div class="practice-card">
-          <div class="practice-icon">⛓️</div>
+          <div class="practice-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <rect x="9" y="9" width="6" height="6"/>
+              <line x1="9" y1="1" x2="9" y2="4"/>
+              <line x1="15" y1="1" x2="15" y2="4"/>
+              <line x1="9" y1="20" x2="9" y2="23"/>
+              <line x1="15" y1="20" x2="15" y2="23"/>
+              <line x1="20" y1="9" x2="23" y2="9"/>
+              <line x1="20" y1="14" x2="23" y2="14"/>
+              <line x1="1" y1="9" x2="4" y2="9"/>
+              <line x1="1" y1="14" x2="4" y2="14"/>
+            </svg>
+          </div>
           <h3 class="practice-title" data-i18n="p3Title">Blockchain & Cryptocurrency</h3>
           <p class="practice-desc" data-i18n="p3Desc">Forward-looking legal advisory for Web3 projects, cryptocurrency exchanges, and digital asset compliance under Thai SEC and Japanese FSA regulatory frameworks.</p>
           <ul class="practice-features-list">
@@ -272,7 +339,12 @@
 
         <!-- 4. Land & Property -->
         <div class="practice-card">
-          <div class="practice-icon">🏡</div>
+          <div class="practice-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
           <h3 class="practice-title" data-i18n="p4Title">Land & Property Advisory</h3>
           <p class="practice-desc" data-i18n="p4Desc">Due diligence, contract drafting, and conveyancing for condominium purchases, commercial property leasing, and real estate investments across Thailand.</p>
           <ul class="practice-features-list">
@@ -285,7 +357,12 @@
 
         <!-- 5. Banking & Finance -->
         <div class="practice-card">
-          <div class="practice-icon">💳</div>
+          <div class="practice-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+              <line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+          </div>
           <h3 class="practice-title" data-i18n="p5Title">Banking, Finance & Investment</h3>
           <p class="practice-desc" data-i18n="p5Desc">Navigating cross-border currency regulations, international remittance compliance, syndicated loans, and foreign direct investment structuring.</p>
           <ul class="practice-features-list">
@@ -298,7 +375,13 @@
 
         <!-- 6. IT & Software Compliance -->
         <div class="practice-card">
-          <div class="practice-icon">💻</div>
+          <div class="practice-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
           <h3 class="practice-title" data-i18n="p6Title">IT & Software Compliance</h3>
           <p class="practice-desc" data-i18n="p6Desc">Intellectual property protection, software license compliance audits, IT vendor agreements, and Personal Data Protection Act (PDPA) compliance.</p>
           <ul class="practice-features-list">
@@ -326,15 +409,15 @@
         </p>
         <ul class="csr-bullets">
           <li>
-            <span class="check">✓</span>
+            <span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
             <span data-i18n="csrB1">Free evaluation of your alimony, divorce settlement, and child support rights.</span>
           </li>
           <li>
-            <span class="check">✓</span>
+            <span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
             <span data-i18n="csrB2">Empathetic, confidential consultation conducted in Thai or Japanese.</span>
           </li>
           <li>
-            <span class="check">✓</span>
+            <span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
             <span data-i18n="csrB3">Clear legal procedures and timelines for filing in Thailand and Japanese Family Courts.</span>
           </li>
         </ul>
@@ -362,7 +445,9 @@
         <div class="attorney-card">
           <div class="attorney-header">
             <div class="attorney-avatar" onclick="openBarCardModal()" style="cursor: pointer;" title="Click to view verified Bar ID">
-              ⚖️
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v18M6 8l6-2 6 2M3 13l3-5 3 5a3 3 0 0 1-6 0zM15 13l3-5 3 5a3 3 0 0 1-6 0zM4 21h16"/>
+              </svg>
             </div>
             <div class="attorney-title-group">
               <h3>
@@ -375,9 +460,18 @@
           </div>
 
           <div class="attorney-badge-bar">
-            <span class="cert-badge">🛡️ <span data-i18n="thaiLic">License No. 1437/2541</span></span>
-            <span class="cert-badge">🏛️ Thai Bar Association</span>
-            <span class="cert-badge">📜 Admitted B.E. 2541 (1998)</span>
+            <span class="cert-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span data-i18n="thaiLic">License No. 1437/2541</span>
+            </span>
+            <span class="cert-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2L2 7h20L12 2z"/></svg>
+              Thai Bar Association
+            </span>
+            <span class="cert-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Admitted B.E. 2541 (1998)
+            </span>
           </div>
 
           <p class="attorney-bio" data-i18n="thaiBio">
@@ -386,9 +480,10 @@
 
           <div class="attorney-footer">
             <button class="bar-verify-btn" onclick="openBarCardModal()">
-              🔍 <span data-i18n="btnVerifyBar">View Official Bar License</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span data-i18n="btnVerifyBar">View Official Bar License</span>
             </button>
-            <span style="font-size: 0.8rem; color: var(--color-csr-green); font-weight: 700;">● Active License</span>
+            <span style="font-size: 0.8rem; color: var(--color-accent-gold-dark); font-weight: 700;">● Active License</span>
           </div>
         </div>
 
@@ -396,7 +491,9 @@
         <div class="attorney-card">
           <div class="attorney-header">
             <div class="attorney-avatar">
-              🏛️
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2L2 7h20L12 2z"/>
+              </svg>
             </div>
             <div class="attorney-title-group">
               <h3>
@@ -409,9 +506,17 @@
           </div>
 
           <div class="attorney-badge-bar">
-            <span class="cert-badge">🇯🇵 Japan Liaison</span>
-            <span class="cert-badge">⚖️ Cross-Border Disputes</span>
-            <span class="cert-badge">🏢 Matsusaka Office</span>
+            <span class="cert-badge">
+              <span class="badge-code-xs">JP</span> Japan Liaison
+            </span>
+            <span class="cert-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M6 8l6-2 6 2M3 13l3-5 3 5a3 3 0 0 1-6 0zM15 13l3-5 3 5a3 3 0 0 1-6 0zM4 21h16"/></svg>
+              Cross-Border Disputes
+            </span>
+            <span class="cert-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="9" y1="6" x2="9" y2="6.01"/><line x1="15" y1="6" x2="15" y2="6.01"/><line x1="9" y1="10" x2="9" y2="10.01"/><line x1="15" y1="10" x2="15" y2="10.01"/><line x1="9" y1="14" x2="9" y2="14.01"/><line x1="15" y1="14" x2="15" y2="14.01"/><line x1="9" y1="18" x2="9" y2="18.01"/><line x1="15" y1="18" x2="15" y2="18.01"/></svg>
+              Matsusaka Office
+            </span>
           </div>
 
           <p class="attorney-bio" data-i18n="jpBio">
@@ -420,7 +525,8 @@
 
           <div class="attorney-footer">
             <a href="#offices" class="bar-verify-btn" style="text-decoration: none;">
-              📍 <span data-i18n="btnJpOffice">View Japan Office Details</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="btnJpOffice">View Japan Office Details</span>
             </a>
             <span style="font-size: 0.8rem; color: var(--color-accent-gold-dark); font-weight: 700;">● Partner Office</span>
           </div>
@@ -446,12 +552,24 @@
             12, 5 Ekkamai 2 Alley, Phra Khanong Nuea, Watthana, Bangkok 10110 Thailand
           </div>
           <ul class="location-details-list">
-            <li>📍 <strong>BTS Access:</strong> Ekkamai BTS Station (Sukhumvit Line)</li>
-            <li>🏢 <strong>Environment:</strong> Private shophouse sanctuary, dedicated consultation suites</li>
-            <li>💬 <strong>Consultation Languages:</strong> Thai, Japanese, English</li>
-            <li>🕒 <strong>Hours:</strong> Mon – Fri: 09:00 – 18:00 (Weekend by appointment)</li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span><strong>BTS Access:</strong> Ekkamai BTS Station (Sukhumvit Line)</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="6" x2="9" y2="6.01"/><line x1="15" y1="6" x2="15" y2="6.01"/><line x1="9" y1="10" x2="9" y2="10.01"/><line x1="15" y1="10" x2="15" y2="10.01"/><line x1="9" y1="14" x2="9" y2="14.01"/><line x1="15" y1="14" x2="15" y2="14.01"/></svg>
+              <span><strong>Environment:</strong> Private shophouse sanctuary, dedicated consultation suites</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span><strong>Consultation Languages:</strong> Thai, Japanese, English</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span><strong>Hours:</strong> Mon – Fri: 09:00 – 18:00 (Weekend by appointment)</span>
+            </li>
           </ul>
-          <div style="display: flex; gap: 10px;">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
             <a href="https://maps.google.com/?q=Ekkamai+2+Alley+Bangkok" target="_blank" class="btn btn-outline" style="padding: 10px 18px; font-size: 0.85rem;">Open Google Maps ↗</a>
             <a href="https://wa.me/66811596722" target="_blank" class="btn btn-whatsapp" style="padding: 10px 18px; font-size: 0.85rem;">WhatsApp Bangkok</a>
           </div>
@@ -465,10 +583,22 @@
             2F, Blk183 Minamicho, Matsusaka-shi, Mie 515-0034 Japan
           </div>
           <ul class="location-details-list">
-            <li>⚖️ <strong>Managing Attorney:</strong> Masatoshi Manago (眞砂 雅敏)</li>
-            <li>🏛️ <strong>Scope:</strong> Family Court petitions, Japanese corporate liaison, notary filings</li>
-            <li>💬 <strong>Consultation Languages:</strong> Japanese, English</li>
-            <li>🕒 <strong>Hours:</strong> Mon – Fri: 09:30 – 17:30 (JST)</li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;"><path d="M12 3v18M6 8l6-2 6 2M3 13l3-5 3 5a3 3 0 0 1-6 0zM15 13l3-5 3 5a3 3 0 0 1-6 0zM4 21h16"/></svg>
+              <span><strong>Managing Attorney:</strong> Masatoshi Manago (眞砂 雅敏)</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;"><path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2L2 7h20L12 2z"/></svg>
+              <span><strong>Scope:</strong> Family Court petitions, Japanese corporate liaison, notary filings</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span><strong>Consultation Languages:</strong> Japanese, English</span>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span><strong>Hours:</strong> Mon – Fri: 09:30 – 17:30 (JST)</span>
+            </li>
           </ul>
           <div style="display: flex; gap: 10px;">
             <a href="#contact" class="btn btn-navy" style="padding: 10px 18px; font-size: 0.85rem;">Inquire with Japan Desk</a>
@@ -488,7 +618,9 @@
 
         <!-- Direct Channels -->
         <a href="https://wa.me/66811596722" target="_blank" class="contact-channel-card">
-          <div class="channel-icon wa">💬</div>
+          <div class="channel-icon wa">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.07-2.029-.48-1.503-.62-2.456-2.148-2.53-2.247-.075-.1-1.002-1.332-1.002-2.541 0-1.209.633-1.804.858-2.05.225-.246.491-.308.655-.308.163 0 .327.002.469.01.15.008.35-.057.548.418.204.492.698 1.704.759 1.828.061.124.102.27.019.434-.082.164-.124.267-.246.411-.123.144-.26.321-.371.431-.123.123-.252.257-.108.504.143.246.637 1.05 1.369 1.701.942.838 1.737 1.097 1.983 1.22.246.123.389.103.533-.062.144-.164.615-.717.779-.963.164-.246.328-.205.553-.123.226.082 1.434.676 1.68.799.246.123.41.184.471.287.061.103.061.595-.083 1.001zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          </div>
           <div class="channel-details">
             <h4>WhatsApp Hotline (Direct)</h4>
             <p>081 159 6722</p>
@@ -496,7 +628,9 @@
         </a>
 
         <div class="contact-channel-card">
-          <div class="channel-icon ln">📱</div>
+          <div class="channel-icon ln">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 10.7c0-4.8-4.3-8.7-9.5-8.7S2.5 5.9 2.5 10.7c0 4.3 3.4 7.9 8 8.6.3.1.8.2.9.6.1.3.1.8 0 1.2l-.2 1.1c-.1.3-.2.8.2 1 .4.2.8 0 1.2-.2 1.5-.9 4.3-2.5 5.9-4.3 1.9-1.9 3-4.5 3-7.4z"/></svg>
+          </div>
           <div class="channel-details">
             <h4>LINE Official Account</h4>
             <p>@lawfirmtable (Inquiries & Consultations)</p>
@@ -504,7 +638,9 @@
         </div>
 
         <a href="tel:+66811596722" class="contact-channel-card" style="text-decoration: none;">
-          <div class="channel-icon ph">📞</div>
+          <div class="channel-icon ph">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
           <div class="channel-details">
             <h4>Direct Counsel Phone</h4>
             <p>+66 81 159 6722 (Bangkok Office)</p>
@@ -549,7 +685,7 @@
             <select id="inquiryCategory" class="form-control">
               <option value="Business Consulting / IP" data-i18n="catBusiness">Business Consulting / Market Entry / IP</option>
               <option value="Alimony / Family Law" data-i18n="catAlimony">Alimony / Emotional Distress / Family Law</option>
-              <option value="Single Mother CSR (Free)" data-i18n="catCSR" style="color: var(--color-csr-green); font-weight: bold;">Single Mother Complimentary Consultation (CSR)</option>
+              <option value="Single Mother CSR (Free)" data-i18n="catCSR">Single Mother Complimentary Consultation (CSR)</option>
               <option value="Blockchain / Crypto" data-i18n="catCrypto">Blockchain / Cryptocurrency / Web3</option>
               <option value="Property & Real Estate" data-i18n="catProperty">Land & Real Estate Advisory</option>
               <option value="General Legal Inquiry" data-i18n="catGeneral">General Legal Inquiry</option>
@@ -570,7 +706,7 @@
           </div>
 
           <p class="form-disclaimer">
-            🔒 By submitting, you confirm that your details will only be reviewed by licensed counsel of Lawyer Firm The Table in accordance with professional legal confidentiality rules.
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-right:4px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> By submitting, you confirm that your details will only be reviewed by licensed counsel of Lawyer Firm The Table in accordance with professional legal confidentiality rules.
           </p>
         </form>
       </div>
@@ -607,7 +743,7 @@
         </div>
         <p data-i18n="footerDesc">Lawyer Firm The Table provides bilingual and trilingual legal counsel bridging Thailand and Japan. Committed to professional rigor, corporate integrity, and humane legal advocacy.</p>
         <div style="font-size: 0.85rem; color: var(--color-accent-gold);">
-          🌐 Domain: <strong>lawfirmtable.com</strong>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-right:4px;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Domain: <strong>lawfirmtable.com</strong>
         </div>
       </div>
 
@@ -638,7 +774,7 @@
           <li><a href="#practices">Areas of Legal Practice</a></li>
           <li><a href="#attorneys">Licensed Counsel Credentials</a></li>
           <li><a href="javascript:void(0)" onclick="openBarCardModal()">Thai Bar Card Verification</a></li>
-          <li><a href="#csr" style="color: var(--color-csr-green); font-weight: 600;">Single Mother CSR Legal Aid</a></li>
+          <li><a href="#csr">Single Mother CSR Legal Aid</a></li>
           <li><a href="#contact">Schedule Consultation</a></li>
         </ul>
       </div>
@@ -720,7 +856,10 @@
           </div>
 
           <div style="margin-top: 22px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-            <button type="button" class="btn btn-gold" onclick="flipBarCard()">🔄 Flip Card Side</button>
+            <button type="button" class="btn btn-gold" onclick="flipBarCard()" style="display:inline-flex;align-items:center;gap:8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+              Flip Card Side
+            </button>
             <button type="button" class="btn btn-navy" onclick="closeModal('barCardModal')">Close Verification</button>
           </div>
         </div>

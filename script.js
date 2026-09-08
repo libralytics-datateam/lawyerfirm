@@ -52,7 +52,7 @@ const translations = {
 
     // Practice Areas
     practiceTag: "Areas of Legal Practice",
-    practiceTitle: "Comprehensive Cross-Border Legal Solutions",
+    practiceTitle: "Cross-Border Legal Solutions",
     practiceSubtitle: "Bridging corporate investment and sensitive human legal matters with equal rigor and discretion.",
     
     p1Title: "Business Consulting & Market Entry",
@@ -663,9 +663,63 @@ function showToast(msg) {
     toast.className = 'toast-notice';
     document.body.appendChild(toast);
   }
-  toast.innerHTML = `<span>✓</span> <div>${msg}</div>`;
+  toast.innerHTML = `<span class="toast-icon" style="display:inline-flex;align-items:center;margin-right:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <div>${msg}</div>`;
   toast.classList.add('show');
   setTimeout(() => {
     toast.classList.remove('show');
   }, 5000);
 }
+
+// Mobile Menu Navigation Toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  const hamburgerSvg = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+  const closeSvg = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+
+  function setMenuState(isOpen) {
+    if (!toggleBtn || !navMenu) return;
+    if (isOpen) {
+      navMenu.classList.add('active', 'mobile-open');
+      toggleBtn.innerHTML = closeSvg;
+      toggleBtn.setAttribute('aria-expanded', 'true');
+    } else {
+      navMenu.classList.remove('active', 'mobile-open');
+      toggleBtn.innerHTML = hamburgerSvg;
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  if (toggleBtn && navMenu) {
+    // Initial icon
+    toggleBtn.innerHTML = hamburgerSvg;
+
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navMenu.classList.contains('active') || navMenu.classList.contains('mobile-open');
+      setMenuState(!isOpen);
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+        setMenuState(false);
+      }
+    });
+
+    // Close mobile menu when clicking any nav link
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        setMenuState(false);
+      });
+    });
+  }
+
+  // Bind consultation form submit
+  const form = document.getElementById('consultationForm');
+  if (form) {
+    form.addEventListener('submit', handleFormSubmit);
+  }
+});
+
