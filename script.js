@@ -18,6 +18,7 @@ const translations = {
     navOffices: "Offices",
     navContact: "Contact",
     btnConsultation: "Free Consultation",
+    langSelectLabel: "Language / 言語 / ภาษา",
 
     // Hero
     heroTag: "Thailand - Japan Strategic Legal Bridge",
@@ -176,6 +177,7 @@ const translations = {
     navOffices: "事務所案内",
     navContact: "お問い合わせ",
     btnConsultation: "無料相談予約",
+    langSelectLabel: "言語選択 (Language / ภาษา)",
 
     // Hero
     heroTag: "日本とタイを結ぶ、確かな法的架け橋",
@@ -334,6 +336,7 @@ const translations = {
     navOffices: "ที่ตั้งสำนักงาน",
     navContact: "ติดต่อเรา",
     btnConsultation: "นัดปรึกษาเบื้องต้น",
+    langSelectLabel: "เลือกภาษา (Language / 言語)",
 
     // Hero
     heroTag: "สะพานเชื่อมทางกฎหมายที่มั่นคง ระหว่างไทยและญี่ปุ่น",
@@ -529,15 +532,14 @@ function setLanguage(lang) {
   if (!translations[lang]) return;
   currentLang = lang;
   localStorage.setItem('lawfirm_lang', lang);
+  document.documentElement.lang = lang;
   document.body.setAttribute('data-lang', lang);
 
-  // Update active buttons in switcher
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    if (btn.getAttribute('data-lang') === lang) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
+  // Update active buttons in header switcher, mobile drawer chips, and footer links
+  document.querySelectorAll('.lang-btn, .mobile-lang-chip, .footer-lang-btn').forEach(btn => {
+    const isActive = btn.getAttribute('data-lang') === lang;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
   });
 
   // Update text nodes with data-i18n attributes

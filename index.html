@@ -93,13 +93,13 @@
             <line x1="19" y1="24.5" x2="22" y2="24.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
           </svg>
         </div>
-        <div class="brand-text">
+        <div class="brand-text notranslate" translate="no">
           <span class="brand-name">Lawyer Firm The Table</span>
           <span class="brand-sub">法律事務所ザ・テーブル • BANGKOK & JAPAN</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation Menu -->
+      <!-- Desktop Navigation Menu & Mobile Drawer Hub -->
       <ul class="nav-menu" id="navMenu">
         <li><a href="#profile" class="nav-link" data-i18n="navProfile">Firm Profile</a></li>
         <li><a href="#practices" class="nav-link" data-i18n="navPractices">Practices</a></li>
@@ -107,14 +107,63 @@
         <li><a href="#attorneys" class="nav-link" data-i18n="navAttorneys">Attorneys</a></li>
         <li><a href="#offices" class="nav-link" data-i18n="navOffices">Offices</a></li>
         <li><a href="#contact" class="nav-link" data-i18n="navContact">Contact</a></li>
+        
+        <!-- Mobile Drawer Dedicated Language Switcher -->
+        <li class="mobile-nav-lang-item">
+          <div class="mobile-lang-box">
+            <span class="mobile-lang-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span data-i18n="langSelectLabel">Language / 言語 / ภาษา</span>
+            </span>
+            <div class="mobile-lang-grid notranslate" translate="no" role="radiogroup" aria-label="Language Selector">
+              <button type="button" class="mobile-lang-chip active" data-lang="en" onclick="setLanguage('en')" aria-label="English" aria-pressed="true">
+                <span class="chip-code">EN</span>
+                <span class="chip-name">English</span>
+                <svg class="chip-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </button>
+              <button type="button" class="mobile-lang-chip" data-lang="ja" onclick="setLanguage('ja')" aria-label="日本語 (Japanese)" aria-pressed="false">
+                <span class="chip-code">JA</span>
+                <span class="chip-name">日本語</span>
+                <svg class="chip-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </button>
+              <button type="button" class="mobile-lang-chip" data-lang="th" onclick="setLanguage('th')" aria-label="ไทย (Thai)" aria-pressed="false">
+                <span class="chip-code">TH</span>
+                <span class="chip-name">ไทย</span>
+                <svg class="chip-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="mobile-nav-cta-item">
+          <a href="#contact" class="btn btn-primary mobile-menu-btn" data-i18n="btnConsultation">Free Consultation</a>
+        </li>
       </ul>
 
       <!-- Action Items & Language Switcher -->
       <div class="nav-actions">
-        <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
-          <button class="lang-btn" data-lang="ja" onclick="setLanguage('ja')">日本語</button>
-          <button class="lang-btn" data-lang="th" onclick="setLanguage('th')">ไทย</button>
+        <div class="lang-switcher notranslate" translate="no" role="radiogroup" aria-label="Select Language">
+          <span class="lang-globe-icon" aria-hidden="true" title="Language / 言語 / ภาษา">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </span>
+          <button type="button" class="lang-btn active" data-lang="en" onclick="setLanguage('en')" title="Switch to English" aria-label="English" aria-pressed="true">
+            <span class="lang-label">EN</span>
+          </button>
+          <span class="lang-sep" aria-hidden="true"></span>
+          <button type="button" class="lang-btn" data-lang="ja" onclick="setLanguage('ja')" title="日本語に切り替え (Japanese)" aria-label="日本語" aria-pressed="false">
+            <span class="lang-label">日本語</span>
+          </button>
+          <span class="lang-sep" aria-hidden="true"></span>
+          <button type="button" class="lang-btn" data-lang="th" onclick="setLanguage('th')" title="เปลี่ยนเป็นภาษาไทย (Thai)" aria-label="ไทย" aria-pressed="false">
+            <span class="lang-label">ไทย</span>
+          </button>
         </div>
         <a href="#contact" class="btn btn-primary btn-consultation" data-i18n="btnConsultation">Free Consultation</a>
         <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
@@ -782,7 +831,14 @@
 
     <div class="container footer-bottom">
       <div data-i18n="footerCopyright">© 2026 Lawyer Firm The Table (lawfirmtable.com). All rights reserved. Registered Thai Bar License No. 1437/2541.</div>
-      <div>Multilingual Legal Services: ภาษาไทย • 日本語 • English</div>
+      <div class="footer-lang-links notranslate" translate="no" role="group" aria-label="Footer Language Switcher">
+        <span>Multilingual Advisory:</span>
+        <button type="button" class="footer-lang-btn" data-lang="en" onclick="setLanguage('en')">English</button>
+        <span class="footer-dot">•</span>
+        <button type="button" class="footer-lang-btn" data-lang="ja" onclick="setLanguage('ja')">日本語</button>
+        <span class="footer-dot">•</span>
+        <button type="button" class="footer-lang-btn" data-lang="th" onclick="setLanguage('th')">ภาษาไทย</button>
+      </div>
     </div>
   </footer>
 
