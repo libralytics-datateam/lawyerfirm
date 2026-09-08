@@ -21,8 +21,8 @@ const translations = {
 
     // Hero
     heroTag: "Thailand - Japan Strategic Legal Bridge",
-    heroTitle: "The Vital Legal Bridge Between Thailand & Japan",
-    heroDesc: "Professional legal counsel with seamless trilingual capability in Thai, Japanese, and English. Operating from our private Ekkamai sanctuary in Bangkok and Japan office, we combine corporate precision with compassionate cross-border legal care.",
+    heroTitle: "The Legal Bridge Between Thailand & Japan",
+    heroDesc: "Professional legal counsel with fluent trilingual capability in Thai, Japanese, and English. Operating from our private Ekkamai office in Bangkok and Japan branch in Mie, we provide corporate advisory and direct cross-border legal protection.",
     credThai: "Licensed Thai Bar Counsel",
     credThaiSub: "Lifetime Member Lic. No. 1437/2541",
     credJp: "Registered Japanese Counsel",
@@ -43,10 +43,10 @@ const translations = {
 
     // Firm Profile
     profileTag: "About The Table",
-    profileTitle: "Redefining International Counsel Through Genuine Human Partnership",
-    profileQuote: "“At The Table, everyone has an equal seat. We believe in resolving the most intricate cross-border matters through dignified, empathetic dialogue and steadfast legal protection.”",
-    profileP1: "Lawyer Firm The Table serves as an essential nexus between Thailand and Japan. Far from cold corporate skyscrapers, our local Bangkok office is nestled within an intimate, dignified shophouse in Ekkamai 2 Alley—creating an environment of utmost privacy, trust, and focused discussion.",
-    profileP2: "Beyond our comprehensive commercial and technology practice, our firm stands distinguished by our profound dedication to cross-border family justice, alimony recovery, and distress claims following international marriages with Japanese nationals.",
+    profileTitle: "Cross-Border Legal Counsel Built on Direct Partnership",
+    profileQuote: "“At The Table, everyone has an equal seat. We believe in resolving complex cross-border disputes through calm, direct dialogue and steadfast legal protection.”",
+    profileP1: "Lawyer Firm The Table is a direct legal bridge between Thailand and Japan. Rather than operating from an impersonal corporate tower, our Bangkok office is situated in a private shophouse in Ekkamai 2 Alley, providing confidentiality, security, and focused discussion.",
+    profileP2: "Alongside our corporate and technology practice, our firm focuses on cross-border family law, alimony recovery, and distress claims following international marriages between Thai and Japanese nationals.",
     shophouseTitle: "Ekkamai Shophouse Office",
     shophouseDesc: "A private, peaceful boutique consultation space in the heart of Sukhumvit.",
 
@@ -56,7 +56,7 @@ const translations = {
     practiceSubtitle: "Bridging corporate investment and sensitive human legal matters with equal rigor and discretion.",
     
     p1Title: "Business Consulting & Market Entry",
-    p1Desc: "Strategic counsel for Japanese firms entering Thailand. Comprehensive assistance for company incorporation, Foreign Business License (FBL), BOI promotion, and corporate compliance.",
+    p1Desc: "Strategic counsel for Japanese firms entering Thailand. Full assistance for company incorporation, Foreign Business License (FBL), BOI promotion, and corporate compliance.",
     p1f1: "Trademark & Copyright IP Filing",
     p1f2: "BOI Investment Incentives",
     p1f3: "Thai-Japan Joint Venture Structuring",
@@ -97,7 +97,7 @@ const translations = {
     csrDesc: "Many individuals face severe administrative and legal barriers when seeking rightful alimony and child support following international marriages with Japanese nationals. As our foundational commitment to social justice, Lawyer Firm The Table offers 100% complimentary legal consultations specifically for single mothers residing in Thailand.",
     csrB1: "Free evaluation of your alimony, divorce settlement, and child support rights.",
     csrB2: "Empathetic, confidential consultation conducted in Thai or Japanese.",
-    csrB3: "Actionable roadmap for legal proceedings in Thailand and Japanese Family Courts.",
+    csrB3: "Clear legal procedures and timelines for filing in Thailand and Japanese Family Courts.",
     btnCsrApply: "Apply for Pro Bono Consultation",
     btnCsrWa: "Confidential WhatsApp Hotline",
 
@@ -111,7 +111,7 @@ const translations = {
     thaiRole: "Licensed Thai Attorney-at-Law",
     thaiBar: "Lawyers Council of Thailand | Lifetime Member",
     thaiLic: "License No. 1437/2541",
-    thaiBio: "Mr. Ruangrit brings over three decades of esteemed legal practice across Thailand. Admitted to the Bar in B.E. 2541 (1998) with lifetime standing, he oversees all litigation, court appearances, property conveyancing, and domestic enforcement for The Table.",
+    thaiBio: "Mr. Ruangrit has practiced law in Thailand for more than 27 years. Admitted to the Bar in B.E. 2541 (1998) with lifetime standing, he oversees all litigation, court appearances, property conveyancing, and domestic enforcement for The Table.",
     btnVerifyBar: "View Official Bar License",
 
     jpName: "Mr. Masatoshi Manago",
@@ -119,7 +119,7 @@ const translations = {
     jpRole: "Partner & Japanese Legal Counsel",
     jpBar: "Japan Office: Mie Prefecture",
     jpOffice: "2F, Blk183 Minamicho, Matsusaka-shi, Mie",
-    jpBio: "Specializing in Japanese commercial law and cross-border civil arbitration, Mr. Manago coordinates cross-border legal actions between Japan and Thailand, providing seamless Japanese language representation and direct liaison with Japanese judicial bodies.",
+    jpBio: "Specializing in Japanese commercial law and cross-border civil arbitration, Mr. Manago coordinates cross-border legal actions between Japan and Thailand, providing native Japanese language representation and direct liaison with Japanese judicial bodies.",
     btnJpOffice: "View Japan Office Details",
 
     // Office Section
