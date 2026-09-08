@@ -558,8 +558,43 @@ function setLanguage(lang) {
 function openBarCardModal() {
   const modal = document.getElementById('barCardModal');
   if (modal) {
+    setCardSide('front');
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+  }
+}
+
+// 3D Bar Card Flip Interactions
+function flipBarCard() {
+  const card = document.getElementById('barFlipCard');
+  if (card) {
+    card.classList.toggle('flipped');
+    updateFlipToolbarState(card.classList.contains('flipped'));
+  }
+}
+
+function setCardSide(side) {
+  const card = document.getElementById('barFlipCard');
+  if (!card) return;
+  if (side === 'back') {
+    card.classList.add('flipped');
+  } else {
+    card.classList.remove('flipped');
+  }
+  updateFlipToolbarState(side === 'back');
+}
+
+function updateFlipToolbarState(isBack) {
+  const frontBtn = document.getElementById('cardFrontTab');
+  const backBtn = document.getElementById('cardBackTab');
+  if (frontBtn && backBtn) {
+    if (isBack) {
+      frontBtn.classList.remove('active');
+      backBtn.classList.add('active');
+    } else {
+      frontBtn.classList.add('active');
+      backBtn.classList.remove('active');
+    }
   }
 }
 

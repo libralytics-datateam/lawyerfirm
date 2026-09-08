@@ -613,22 +613,74 @@
   <div class="modal-backdrop" id="barCardModal">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h3>Official Lawyer Council of Thailand Membership</h3>
+        <div>
+          <h3>Official Lawyer Council of Thailand License</h3>
+          <p style="font-size: 0.82rem; color: var(--color-accent-gold-dark); margin-bottom: 0;">Verified Thai Bar Identification • Lifetime Standing (ตลอดชีพ)</p>
+        </div>
         <button class="modal-close-btn" onclick="closeModal('barCardModal')">×</button>
       </div>
       <div class="modal-body">
         <div class="bar-id-display-card">
-          <img src="assets/images/thai_lawyer_id.jpg" alt="Official Lawyers Council of Thailand ID Card - Ruangrit Kongmuang">
+          <!-- Flip Controls Toolbar -->
+          <div class="flip-toolbar">
+            <button type="button" class="flip-tab-btn active" id="cardFrontTab" onclick="setCardSide('front')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><line x1="15" y1="8" x2="17" y2="8"/><line x1="15" y1="12" x2="17" y2="12"/></svg>
+              <span>Card Front (หน้าบัตร)</span>
+            </button>
+            <button type="button" class="flip-tab-btn" id="cardBackTab" onclick="setCardSide('back')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Card Back • Council Seal (หลังบัตร ตราสภา)</span>
+            </button>
+            <button type="button" class="flip-trigger-btn" onclick="flipBarCard()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.19"/></svg>
+              <span>Click to Flip Card</span>
+            </button>
+          </div>
+
+          <!-- 3D Flip Card Container -->
+          <div class="flip-card-container" id="barFlipCard" onclick="flipBarCard()" title="Click card to flip between front and back">
+            <div class="flip-card-inner">
+              <!-- Front of the Card -->
+              <div class="flip-card-front">
+                <span class="card-side-badge">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                  FRONT • ทนายความ
+                </span>
+                <span class="flip-hint-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.19"/></svg>
+                  Click to Flip
+                </span>
+                <img src="assets/images/thai_lawyer_card_front.jpg" alt="Official Lawyers Council of Thailand Bar License Front - Ruangrit Kongmuang">
+              </div>
+
+              <!-- Back of the Card -->
+              <div class="flip-card-back">
+                <span class="card-side-badge back-badge">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                  BACK • สภาทนายความ ตราประทับ
+                </span>
+                <span class="flip-hint-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.19"/></svg>
+                  Click to Flip
+                </span>
+                <img src="assets/images/thai_lawyer_card_back.jpg" alt="Official Lawyers Council of Thailand Bar License Back - Council Seal and Lifetime Standing">
+              </div>
+            </div>
+          </div>
+
+          <!-- Metadata Grid -->
           <div class="bar-meta-grid">
             <div><strong>Lawyer Name:</strong> Mr. Ruangrit Kongmuang (นายเรืองฤทธิ์ กองเมือง)</div>
-            <div><strong>License Number:</strong> 1437/2541</div>
-            <div><strong>Membership Type:</strong> Lifetime (ประเภท ตลอดชีพ)</div>
-            <div><strong>Governing Body:</strong> Lawyers Council of Thailand (สภาทนายความในพระบรมราชูปถัมภ์)</div>
+            <div><strong>License Number:</strong> 1437/2541 (ใบอนุญาตเลขที่ ๑๔๓๗/๒๕๔๑)</div>
+            <div><strong>Membership Type:</strong> Lifetime Standing (ประเภท ตลอดชีพ)</div>
+            <div><strong>Governing Council:</strong> Lawyers Council of Thailand Under Royal Patronage</div>
             <div><strong>Bangkok Practice:</strong> Lawyer Firm The Table (Ekkamai 2)</div>
-            <div><strong>Status:</strong> Active & Fully Licensed</div>
+            <div><strong>Status:</strong> Active & Fully Licensed Bar Counsel</div>
           </div>
-          <div style="margin-top: 18px;">
-            <button class="btn btn-navy" onclick="closeModal('barCardModal')">Close Verification</button>
+
+          <div style="margin-top: 22px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+            <button type="button" class="btn btn-gold" onclick="flipBarCard()">🔄 Flip Card Side</button>
+            <button type="button" class="btn btn-navy" onclick="closeModal('barCardModal')">Close Verification</button>
           </div>
         </div>
       </div>
