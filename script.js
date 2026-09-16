@@ -116,7 +116,7 @@ const translations = {
     btnVerifyBar: "View Official Bar License",
 
     jpName: "Mr. Masatoshi Manago",
-    jpNameLocal: "(眞砂 雅敏)",
+    jpNameLocal: "(砂子 昌利)",
     jpRole: "Partner & Japanese Legal Counsel",
     jpBar: "Japan Office: Mie Prefecture",
     jpOffice: "2F, Blk183 Minamicho, Matsusaka-shi, Mie",
@@ -274,7 +274,7 @@ const translations = {
     thaiBio: "タイ法曹界において30年近くの豊富な訴訟・仲裁実績を有するベテラン弁護士。タイ弁護士評議会の終身ライセンスを保持し、民事・商事・不動産・家族訴訟の現場を一手に統括しています。",
     btnVerifyBar: "弁護士登録証（現物写真）を確認",
 
-    jpName: "眞砂 雅敏 弁護士",
+    jpName: "砂子 昌利 弁護士",
     jpNameLocal: "(Masatoshi Manago)",
     jpRole: "日本側提携弁護士 / リーガルカウンセル",
     jpBar: "日本事務所：三重県松阪市",
@@ -434,7 +434,7 @@ const translations = {
     btnVerifyBar: "ดูใบอนุญาตทนายความ (ฉบับจริง)",
 
     jpName: "ทนายความ มาซาโตชิ มานาโกะ",
-    jpNameLocal: "(Masatoshi Manago / 眞砂 雅敏)",
+    jpNameLocal: "(Masatoshi Manago / 砂子 昌利)",
     jpRole: "ทนายความหุ้นส่วนผู้เชี่ยวชาญกฎหมายญี่ปุ่น",
     jpBar: "สำนักงานญี่ปุ่น: จังหวัดมิเอะ",
     jpOffice: "2F, Blk183 Minamicho, Matsusaka-shi, Mie",
