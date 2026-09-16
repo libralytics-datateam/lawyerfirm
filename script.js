@@ -48,8 +48,8 @@ const translations = {
     profileQuote: "“At The Table, everyone has an equal seat. We believe in resolving complex cross-border disputes through calm, direct dialogue and steadfast legal protection.”",
     profileP1: "Lawyer Firm The Table is a direct legal bridge between Thailand and Japan. Rather than operating from an impersonal corporate tower, our Bangkok office is situated in a private shophouse in Ekkamai 2 Alley, providing confidentiality, security, and focused discussion.",
     profileP2: "Alongside our corporate and technology practice, our firm focuses on cross-border family law, alimony recovery, and distress claims following international marriages between Thai and Japanese nationals.",
-    shophouseTitle: "Ekkamai Shophouse Office",
-    shophouseDesc: "A private, peaceful boutique consultation space in the heart of Sukhumvit.",
+    shophouseTitle: "Ekkamai Office & Law Library",
+    shophouseDesc: "A private consultation space and legal reference library in the heart of Sukhumvit.",
 
     // Practice Areas
     practiceTag: "Areas of Legal Practice",
@@ -207,8 +207,8 @@ const translations = {
     profileQuote: "「『ザ・テーブル』では、すべての人が対等に席につきます。私たちは威圧感のない温かな空間で、お互いを助け合う心と強固な法的知見をもって皆様を支えます。」",
     profileP1: "当事務所はタイ・バンコクの閑静なエカマイ・ソイ2のショップハウス（タウンハウス）に拠点を構えています。無機質なガラス張りのオフィスではなく、プライバシーが守られ、安心して本音を語れる落ち着いた環境をご用意しております。",
     profileP2: "一般的な企業法務や市場参入支援にとどまらず、当事務所では国際結婚に伴う養育費請求や慰謝料請求において独自の専門性を培ってまいりました。現地タイにおいて、一人で悩む方々に寄り添い、確固たる権利の実現を目指します。",
-    shophouseTitle: "エカマイ・ショップハウス事務所",
-    shophouseDesc: "バンコク中心部スクンビットの隠れ家的なプライベート空間。",
+    shophouseTitle: "エカマイ法務書架・相談オフィス",
+    shophouseDesc: "バンコク中心部スクンビットの落ち着いた法律書架とプライベート相談空間。",
 
     // Practice Areas
     practiceTag: "取扱業務分野",
@@ -366,8 +366,8 @@ const translations = {
     profileQuote: "“ณ เดอะ เทเบิล ทุกคนมีที่นั่งอันเท่าเทียมกัน เราเชื่อมั่นในการแก้ไขข้อพิพาทข้ามพรมแดนที่ซับซ้อน ผ่านการรับฟังอย่างเข้าอกเข้าใจ และการพิทักษ์สิทธิทางกฎหมายอย่างแน่วแน่”",
     profileP1: "สำนักงานของเราตั้งอยู่ในอาคารตึกแถวบูทีคในซอยเอกมัย 2 กรุงเทพฯ ซึ่งได้รับการออกแบบให้อบอุ่น เป็นส่วนตัว และปลอดภัย ปราศจากบรรยากาศน่าเกรงขามหรือเย็นชาของอาคารสำนักงานขนาดใหญ่ เพื่อให้ลูกความรู้สึกสบายใจและไว้วางใจในการเล่าข้อเท็จจริง",
     profileP2: "นอกเหนือจากงานที่ปรึกษาการลงทุนและการขยายธุรกิจแล้ว เรามีความเชี่ยวชาญเป็นพิเศษในการเรียกร้องค่าอุปการะเลี้ยงดู ค่าเลี้ยงชีพ และค่าสินไหมทดแทนความเสียหายทางจิตใจอันเกิดจากการสมรสข้ามชาติ เราพร้อมเคียงข้างและต่อสู้เพื่อสิทธิอันชอบธรรมของคุณ",
-    shophouseTitle: "สำนักงานเอกมัย บูทีค โชว์พาวส์",
-    shophouseDesc: "พื้นที่ปรึกษากฎหมายที่เป็นส่วนตัวและปลอดภัยใจกลางสุขุมวิท",
+    shophouseTitle: "ห้องสมุดกฎหมายและห้องปรึกษาคดี สำนักงานเอกมัย",
+    shophouseDesc: "พื้นที่ปรึกษากฎหมายและคลังตำราวิชาการที่เป็นส่วนตัวใจกลางสุขุมวิท",
 
     // Practice Areas
     practiceTag: "บริการทางกฎหมาย",
