@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lawyer Firm The Table</title>
+<style>
+:root{--navy:#14213D;--gold:#C9A24B;--bg:#f6f4ef}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans Thai","Noto Sans JP","Hiragino Sans","Yu Gothic",Roboto,sans-serif;background:var(--bg);color:#1b1b1b;font-size:16px;line-height:1.55}
+header{background:var(--navy);color:#fff;padding:16px;border-bottom:4px solid var(--gold)}
+header h1{margin:0;font-size:1.2rem;color:var(--gold)}
+header small{opacity:.85}
+.langs{margin-top:8px;display:flex;gap:6px}
+.langs button{background:transparent;color:#fff;border:1px solid var(--gold);border-radius:16px;padding:4px 12px;font-size:.9rem}
+.langs button.on{background:var(--gold);color:var(--navy);font-weight:700}
+main{padding:16px;max-width:560px;margin:auto}
+.btn{display:block;width:100%;text-align:center;text-decoration:none;border:0;border-radius:12px;padding:18px 14px;margin:12px 0;font-size:1.05rem;font-weight:700;background:var(--navy);color:#fff;cursor:pointer}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.btn.out{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.row{display:flex;gap:8px}.row .btn{padding:14px 6px;font-size:.95rem}
+label{display:block;font-weight:600;margin:14px 0 4px}
+select,textarea{width:100%;padding:12px;border:1px solid #bbb;border-radius:8px;font:inherit;background:#fff}
+.notice{background:#fff8e6;border-left:4px solid var(--gold);padding:10px;font-size:.88rem;margin:12px 0}
+pre{white-space:pre-wrap;background:#fff;padding:12px;border-radius:8px;border:1px solid #ddd}
+.hidden{display:none}
+footer{text-align:center;font-size:.8rem;color:#666;padding:16px}
+</style>
+<script>
+// >>> REPLACE with your LIFF ID from LINE Developers Console (or set window.LIFF_ID before this script) <<<
+window.LIFF_ID = window.LIFF_ID || "2012228617-Hxvy7UGE";
+</script>
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js" charset="utf-8"></script>
+</head>
+<body>
+<header>
+  <h1>⚖ Lawyer Firm The Table</h1>
+  <small data-i="hello"></small> <small id="name"></small>
+  <div class="langs"><button data-l="th">ไทย</button><button data-l="ja">日本語</button><button data-l="en">EN</button></div>
+</header>
+<main>
+<section id="home">
+  <button class="btn gold" id="bookBtn" data-i="book"></button>
+  <button class="btn" id="intakeBtn" data-i="intake"></button>
+  <p style="font-weight:600;margin-bottom:0" data-i="contact"></p>
+  <div class="row">
+    <a class="btn out" href="tel:+6623814299" data-i="call"></a>
+    <a class="btn out" id="waLink" href="https://wa.me/66811596722" data-i="wa"></a>
+    <a class="btn out" id="mapLink" href="https://www.google.com/maps/search/?api=1&query=12%2C%205%20Ekkamai%202%20Alley%2C%20Watthana%2C%20Bangkok%2010110" data-i="map"></a>
+  </div>
+</section>
+<section id="form" class="hidden">
+  <form id="f">
+    <label for="mt" data-i="mt"></label><select id="mt" required></select>
+    <label for="pl" data-i="pl"></label>
+    <select id="pl"><option value="ไทย / Thai">ไทย</option><option value="日本語 / Japanese">日本語</option><option value="English">English</option></select>
+    <label for="desc" data-i="desc"></label><textarea id="desc" rows="5" maxlength="600" required></textarea>
+    <label for="ct" data-i="ct"></label><select id="ct"></select>
+    <div class="notice" data-i="notice"></div>
+    <button class="btn gold" type="submit" data-i="send"></button>
+    <button class="btn out" type="button" id="backBtn" data-i="back"></button>
+  </form>
+</section>
+<section id="thanks" class="hidden">
+  <h2 data-i="thx"></h2><p id="thxMsg"></p>
+  <pre id="summary" class="hidden"></pre>
+  <a class="btn hidden" id="oaLink" href="https://line.me/R/ti/p/@918ujhum" data-i="openOA"></a>
+  <button class="btn gold" id="bookBtn2" data-i="book"></button>
+  <button class="btn out" id="homeBtn" data-i="back"></button>
+</section>
+</main>
+<footer data-i="disc"></footer>
+<script>
+const BOOK_URL="https://calendar.google.com/calendar/appointments/schedules/AcZssZ063b2G2D5iphuJqtga-YGXJfOtBQd3zanNZncXVShZCgmTxuK_nKR7gJxclo9_-zJiPci0DSMN";
+const T={
+ th:{hello:"สวัสดี",book:"📅 จองปรึกษาฟรี 30 นาที",intake:"📝 แจ้งเรื่องของท่าน",contact:"ติดต่อเรา",call:"📞 โทร",wa:"💬 WhatsApp",map:"📍 แผนที่",
+  mt:"ประเภทเรื่อง",pl:"ภาษาที่ต้องการ",desc:"รายละเอียดโดยย่อ",ct:"เวลาที่สะดวกให้ติดต่อ",send:"ส่ง",back:"กลับหน้าหลัก",
+  notice:"โปรดอย่าแนบเอกสารลับ เลขบัตร รหัสผ่าน หรือข้อมูลการชำระเงินที่นี่ เราจะติดต่อกลับเพื่อขอรายละเอียด · ไม่ใช่คำแนะนำทางกฎหมาย",
+  thx:"ขอบคุณค่ะ/ครับ",sent:"ส่งข้อมูลเข้าแชทแล้ว ทีมงานจะติดต่อกลับเร็วๆ นี้",outside:"กรุณาคัดลอกข้อความด้านล่างและส่งถึงเราทาง LINE",openOA:"เปิด LINE OA",
+  disc:"ข้อมูลในแอปนี้ไม่ใช่คำแนะนำทางกฎหมาย",types:["จัดตั้งบริษัท & BOI","อสังหาริมทรัพย์","ครอบครัว & ค่าเลี้ยงดู","คริปโต/บล็อกเชน","IT/PDPA","อื่นๆ"],
+  times:["เช้า (09-12)","บ่าย (12-15)","เย็น (15-18)","เวลาใดก็ได้"],hdr:"[แจ้งเรื่องใหม่]"},
+ ja:{hello:"こんにちは",book:"📅 無料30分相談を予約",intake:"📝 ご相談内容を送る",contact:"お問い合わせ",call:"📞 電話",wa:"💬 WhatsApp",map:"📍 地図",
+  mt:"相談分野",pl:"希望言語",desc:"概要（簡単に）",ct:"連絡希望時間帯",send:"送信",back:"ホームへ戻る",
+  notice:"機密書類、ID番号、パスワード、決済情報はここに含めないでください。詳細は追ってご連絡します。・法的助言ではありません",
+  thx:"ありがとうございます",sent:"トークに送信しました。担当者よりご連絡いたします。",outside:"以下の内容をコピーしてLINEでお送りください。",openOA:"LINE公式アカウントを開く",
+  disc:"本アプリの情報は法的助言ではありません",types:["会社設立・BOI","不動産","家族・養育費","暗号資産/ブロックチェーン","IT/PDPA","その他"],
+  times:["午前 (9-12時)","午後 (12-15時)","夕方 (15-18時)","いつでも"],hdr:"[新規ご相談]"},
+ en:{hello:"Hello",book:"📅 Book a free 30-min consultation",intake:"📝 Send us your matter",contact:"Contact us",call:"📞 Call",wa:"💬 WhatsApp",map:"📍 Map",
+  mt:"Matter type",pl:"Preferred language",desc:"Short description",ct:"Preferred contact time",send:"Send",back:"Back to home",
+  notice:"Do not include confidential documents, ID numbers, passwords or payment info here; we will contact you for details. · Not legal advice.",
+  thx:"Thank you",sent:"Your message was sent to our chat. We will contact you soon.",outside:"Please copy the summary below and send it to us on LINE.",openOA:"Open our LINE OA",
+  disc:"Information in this app is not legal advice.",types:["Company setup & BOI","Property","Family & alimony","Crypto / blockchain","IT / PDPA","Other"],
+  times:["Morning (09-12)","Afternoon (12-15)","Evening (15-18)","Any time"],hdr:"[New inquiry]"}
+};
+let lang="th";const $=id=>document.getElementById(id);
+function setLang(l){lang=T[l]?l:"en";document.documentElement.lang=lang;const d=T[lang];
+ document.querySelectorAll("[data-i]").forEach(e=>{e.textContent=d[e.dataset.i]});
+ document.querySelectorAll(".langs button").forEach(b=>b.classList.toggle("on",b.dataset.l===lang));
+ const mi=$("mt").selectedIndex,ci=$("ct").selectedIndex;
+ $("mt").innerHTML=d.types.map((t,i)=>`<option value="${i}">${t}</option>`).join("");
+ $("ct").innerHTML=d.times.map((t,i)=>`<option value="${i}">${t}</option>`).join("");
+ if(mi>0)$("mt").selectedIndex=mi;if(ci>0)$("ct").selectedIndex=ci;}
+function show(id){["home","form","thanks"].forEach(s=>$(s).classList.toggle("hidden",s!==id));scrollTo(0,0)}
+const ready=()=>typeof liff!=="undefined"&&liff.id;
+function openUrl(url){if(ready()&&liff.isInClient())liff.openWindow({url,external:true});else window.open(url,"_blank")}
+document.querySelectorAll(".langs button").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+$("bookBtn").onclick=$("bookBtn2").onclick=()=>openUrl(BOOK_URL);
+["waLink","mapLink"].forEach(id=>$(id).onclick=e=>{if(ready()&&liff.isInClient()){e.preventDefault();openUrl($(id).href)}});
+$("intakeBtn").onclick=()=>show("form");$("backBtn").onclick=$("homeBtn").onclick=()=>show("home");
+$("f").onsubmit=async e=>{e.preventDefault();const d=T[lang],en=T.en;
+ const i=+$("mt").value,c=+$("ct").value;
+ const text=[d.hdr+" Lawyer Firm The Table",
+  `■ ${d.mt}: ${d.types[i]}${lang!=="en"?" / "+en.types[i]:""}`,
+  `■ ${d.pl}: ${$("pl").value}`,
+  `■ ${d.ct}: ${d.times[c]}`,
+  `■ ${d.desc}:`, $("desc").value.trim().slice(0,600)].join("\n");
+ show("thanks");
+ if(ready()&&liff.isInClient()){
+  try{await liff.sendMessages([{type:"text",text}]);$("thxMsg").textContent=d.sent;
+   setTimeout(()=>{try{liff.closeWindow()}catch(_){}} ,6000);return;}catch(err){console.warn(err)}
+ }
+ $("thxMsg").textContent=d.outside;$("summary").textContent=text;
+ $("summary").classList.remove("hidden");$("oaLink").classList.remove("hidden");};
+const pick=s=>(s||"").toLowerCase().startsWith("ja")?"ja":(s||"").toLowerCase().startsWith("th")?"th":"en";
+setLang(pick(navigator.language));
+(async()=>{if(typeof liff==="undefined")return;
+ try{await liff.init({liffId:window.LIFF_ID});
+  setLang(pick(liff.getLanguage&&liff.getLanguage()));
+  if(!liff.isLoggedIn()){liff.login();return}
+  const p=await liff.getProfile();$("name").textContent=p.displayName;
+ }catch(err){console.warn("LIFF init failed",err)}})();
+</script>
+</body>
+</html>

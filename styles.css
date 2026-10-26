@@ -1351,6 +1351,31 @@ h1, h2, h3, h4, .font-serif {
   color: #ffffff;
 }
 
+.contact-cta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: -8px 0 28px;
+}
+
+.contact-cta-row .btn {
+  width: 100%;
+  text-align: center;
+}
+
+.btn-line {
+  background-color: #06c755;
+  color: #ffffff;
+  border-color: #06c755;
+}
+
+.btn-line:hover {
+  background-color: #05a849;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(6, 199, 85, 0.3);
+}
+
 .channel-details h4 {
   color: #ffffff;
   font-size: 0.95rem;
