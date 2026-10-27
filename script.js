@@ -8,7 +8,8 @@ const translations = {
   en: {
     // Top Bar
     topNotice: "Confidential Cross-Border Legal Advisory | Bangkok Ekkamai Office & Japan Office",
-    topWa: "Direct WhatsApp: 081 159 6722",
+    topLine: "LINE Official: Add Friend",
+    topWa: "LINE Official: Add Friend",
 
     // Navigation
     navProfile: "Firm Profile",
@@ -30,6 +31,7 @@ const translations = {
     credJpSub: "Matsusaka, Mie Office Advisory",
     btnBookNow: "Schedule Consultation",
     btnCsrExplore: "Single Mother CSR Support",
+    btnLine: "LINE Official",
     heroTagTitle: "Lawyer Firm The Table — Bangkok HQ",
     heroTagSub: "Ekkamai 2 Alley, Watthana, Bangkok",
     heroBadgeBilateral: "Bilateral Legal Excellence",
@@ -100,7 +102,8 @@ const translations = {
     csrB2: "Empathetic, confidential consultation conducted in Thai or Japanese.",
     csrB3: "Clear legal procedures and timelines for filing in Thailand and Japanese Family Courts.",
     btnCsrApply: "Apply for Pro Bono Consultation",
-    btnCsrWa: "Confidential WhatsApp Hotline",
+    btnCsrLine: "Confidential LINE Consultation",
+    btnCsrWa: "Confidential LINE Consultation",
 
     // Attorneys Section
     attorneyTag: "Our Counsel",
@@ -132,6 +135,7 @@ const translations = {
     jpTitle: "Japan Partner Office (Mie)",
     jpAddress: "2F, Blk183 Minamicho, Matsusaka-shi, Mie 515-0034 Japan",
     jpNote: "Dedicated coordination office for Japan-based filings, family court petitions, and corporate liaison.",
+    btnLineBkk: "LINE Bangkok Office",
 
     // Contact Section
     contactTag: "Connect With Us",
@@ -141,12 +145,17 @@ const translations = {
     formSub: "All inquiries are protected by strict attorney-client privilege.",
     lblFullName: "Full Name",
     lblEmail: "Email Address",
-    lblPhone: "Phone / WhatsApp / LINE",
+    lblPhone: "Phone / LINE ID",
     lblCategory: "Inquiry Category",
     lblLanguage: "Preferred Consultation Language",
     lblMessage: "Brief Case Summary",
     btnSubmit: "Submit Confidential Request",
-    btnSendWa: "Send Inquiry via WhatsApp",
+    btnSendLine: "Inquire via LINE",
+    btnSendWa: "Inquire via LINE",
+    floatingLine: "LINE Legal Consultation",
+    lineChannelTitle: "LINE Official Account",
+    lineChannelDesc: "lin.ee/UnwiH4T (Add Friend ↗)",
+    directHotlineTitle: "Direct Mobile Hotline",
 
     // Categories
     catBusiness: "Business Consulting / Market Entry / IP",
@@ -167,7 +176,8 @@ const translations = {
   ja: {
     // Top Bar
     topNotice: "タイ・日本間の越境法務専門 | バンコク・エカマイ事務所 & 日本事務所",
-    topWa: "直通WhatsApp: 081 159 6722",
+    topLine: "公式LINE: 友だち追加・相談",
+    topWa: "公式LINE: 友だち追加・相談",
 
     // Navigation
     navProfile: "事務所概要",
@@ -189,6 +199,7 @@ const translations = {
     credJpSub: "三重県松阪市オフィス連携",
     btnBookNow: "法律相談を予約する",
     btnCsrExplore: "シングルマザー無料支援",
+    btnLine: "公式LINE相談",
     heroTagTitle: "法律事務所ザ・テーブル (バンコク本社)",
     heroTagSub: "バンコク・ワッタナー区エカマイ・ソイ2",
     heroBadgeBilateral: "日タイ法務の信頼と実績",
@@ -259,7 +270,8 @@ const translations = {
     csrB2: "タイ語または日本語での安心かつプライ密な個別相談対応",
     csrB3: "日本国内の裁判所手続きおよびタイ国内執行の道筋をご提案",
     btnCsrApply: "無料支援相談を申し込む",
-    btnCsrWa: "秘密厳守 LINE / WhatsApp 相談",
+    btnCsrLine: "秘密厳守 LINE 相談窓口",
+    btnCsrWa: "秘密厳守 LINE 相談窓口",
 
     // Attorneys Section
     attorneyTag: "所属弁護士",
@@ -291,6 +303,7 @@ const translations = {
     jpTitle: "日本連携オフィス（三重）",
     jpAddress: "日本国三重県松阪市南町183ブロック2F (〒515-0034)",
     jpNote: "日本国内での家庭裁判所申立て、公証手続き、日本企業窓口を担当いたします。",
+    btnLineBkk: "公式LINE (バンコク事務所)",
 
     // Contact Section
     contactTag: "お問い合わせ",
@@ -300,12 +313,17 @@ const translations = {
     formSub: "ご送信いただいた内容は弁護士の守秘義務により厳格に保護されます。",
     lblFullName: "お名前（漢字 / ローマ字）",
     lblEmail: "メールアドレス",
-    lblPhone: "お電話番号 / WhatsApp / LINE ID",
+    lblPhone: "お電話番号 / LINE ID",
     lblCategory: "ご相談分野",
     lblLanguage: "ご希望の対応言語",
     lblMessage: "ご相談内容の概要",
     btnSubmit: "秘密厳守で相談内容を送信",
-    btnSendWa: "WhatsAppから今すぐ問い合わせ",
+    btnSendLine: "公式LINEから問い合わせ",
+    btnSendWa: "公式LINEから問い合わせ",
+    floatingLine: "LINEで法律相談",
+    lineChannelTitle: "LINE公式アカウント",
+    lineChannelDesc: "lin.ee/UnwiH4T (友だち追加 ↗)",
+    directHotlineTitle: "直通携帯ホットライン",
 
     // Categories
     catBusiness: "進出支援 / 企業法務 / 知的財産権",
@@ -326,7 +344,8 @@ const translations = {
   th: {
     // Top Bar
     topNotice: "สำนักงานทนายความ เดอะ เทเบิ้ล | ที่ปรึกษากฎหมายไทย-ญี่ปุ่น สำนักงานเอกมัย กรุงเทพฯ",
-    topWa: "ติดต่อ WhatsApp: 081 159 6722",
+    topLine: "LINE Official: เพิ่มเพื่อนปรึกษาคดี",
+    topWa: "LINE Official: เพิ่มเพื่อนปรึกษาคดี",
 
     // Navigation
     navProfile: "เกี่ยวกับเรา",
@@ -348,6 +367,7 @@ const translations = {
     credJpSub: "สำนักงานประสานงาน จ.มิเอะ ประเทศญี่ปุ่น",
     btnBookNow: "นัดหมายปรึกษากฎหมาย",
     btnCsrExplore: "ปรึกษาฟรี สำหรับแม่เลี้ยงเดี่ยว",
+    btnLine: "ปรึกษาผ่าน LINE",
     heroTagTitle: "สำนักงานทนายความ เดอะ เทเบิ้ล (กรุงเทพฯ)",
     heroTagSub: "ซอยเอกมัย 2 แขวงพระโขนงเหนือ เขตวัฒนา กรุงเทพฯ",
     heroBadgeBilateral: "ความเชี่ยวชาญกฎหมายไทย-ญี่ปุ่น",
@@ -418,7 +438,8 @@ const translations = {
     csrB2: "พูดคุยอย่างเข้าใจ เป็นกันเอง และรักษาความลับสูงสุดด้วยภาษาไทย",
     csrB3: "วางแผนขั้นตอนทางกฎหมายทั้งในประเทศไทยและศาลครอบครัวในประเทศญี่ปุ่น",
     btnCsrApply: "ลงทะเบียนรับคำปรึกษาฟรี",
-    btnCsrWa: "ปรึกษาด่วนผ่าน WhatsApp (เป็นความลับ)",
+    btnCsrLine: "ปรึกษาด่วนผ่าน LINE (เป็นความลับ)",
+    btnCsrWa: "ปรึกษาด่วนผ่าน LINE (เป็นความลับ)",
 
     // Attorneys Section
     attorneyTag: "คณะทนายความ",
@@ -450,6 +471,7 @@ const translations = {
     jpTitle: "สำนักงานประสานงาน ณ ประเทศญี่ปุ่น (มิเอะ)",
     jpAddress: "2F, Blk183 Minamicho, Matsusaka-shi, Mie 515-0034 JAPAN",
     jpNote: "ประสานงานคดีครอบครัว ยื่นคำร้องต่อศาลในญี่ปุ่น และดูแลลูกค้าองค์กรญี่ปุ่น",
+    btnLineBkk: "LINE สำนักงานกรุงเทพฯ",
 
     // Contact Section
     contactTag: "ติดต่อสำนักงาน",
@@ -459,12 +481,17 @@ const translations = {
     formSub: "ข้อมูลทุกอย่างของท่านได้รับการคุ้มครองภายใต้จรรยาบรรณวิชาชีพทนายความ",
     lblFullName: "ชื่อ - นามสกุล",
     lblEmail: "อีเมล",
-    lblPhone: "เบอร์โทรศัพท์ / WhatsApp / LINE ID",
+    lblPhone: "เบอร์โทรศัพท์ / LINE ID",
     lblCategory: "เรื่องที่ต้องการปรึกษา",
     lblLanguage: "ภาษาที่สะดวกในการสื่อสาร",
     lblMessage: "สรุปข้อเท็จจริงเบื้องต้น",
     btnSubmit: "ส่งข้อมูลเพื่อนัดหมาย",
-    btnSendWa: "ส่งข้อความผ่าน WhatsApp ทันที",
+    btnSendLine: "ส่งข้อความผ่าน LINE ทันที",
+    btnSendWa: "ส่งข้อความผ่าน LINE ทันที",
+    floatingLine: "ปรึกษากฎหมายผ่าน LINE",
+    lineChannelTitle: "LINE Official Account",
+    lineChannelDesc: "lin.ee/UnwiH4T (เพิ่มเพื่อน ↗)",
+    directHotlineTitle: "สายด่วนติดต่อโดยตรง",
 
     // Categories
     catBusiness: "กฎหมายธุรกิจ / จัดตั้งบริษัท / ทรัพย์สินทางปัญญา",
@@ -655,6 +682,28 @@ function sendWhatsAppInquiry() {
   const waUrl = `https://wa.me/66811596722?text=${text}`;
   window.open(waUrl, '_blank');
 }
+
+// Launch LINE Official with pre-filled case details / clipboard copy
+function sendLineInquiry() {
+  const name = document.getElementById('clientName')?.value;
+  const category = document.getElementById('inquiryCategory')?.value;
+  const langChoice = document.getElementById('preferredLanguage')?.value;
+  const message = document.getElementById('clientMessage')?.value;
+
+  if (name || message) {
+    const summary = `[Lawyer Firm The Table Consultation Request]\n• Name: ${name || 'N/A'}\n• Category: ${category || 'General'}\n• Language: ${langChoice || 'English'}\n• Message: ${message || 'N/A'}`;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(summary).catch(() => {});
+    }
+    showToast(currentLang === 'ja'
+      ? 'ご相談内容をクリップボードにコピーしました。公式LINEを開きます。'
+      : currentLang === 'th'
+      ? 'คัดลอกข้อความปรึกษาแล้ว กำลังเปิด LINE Official'
+      : 'Inquiry details copied to clipboard! Opening LINE Official...');
+  }
+  window.open('https://lin.ee/UnwiH4T', '_blank');
+}
+
 
 // Toast Notification
 function showToast(msg) {

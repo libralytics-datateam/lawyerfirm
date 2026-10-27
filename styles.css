@@ -214,6 +214,19 @@ h1, h2, h3, h4, .font-serif {
   box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
 }
 
+.btn-line {
+  background-color: #06c755;
+  color: #ffffff;
+}
+
+.btn-line:hover {
+  background-color: #05b34c;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(6, 199, 85, 0.35);
+}
+
+
 /* ==========================================================================
    HEADER & TOP BAR
    ========================================================================== */
@@ -2110,3 +2123,53 @@ h1, h2, h3, h4, .font-serif {
     padding: 14px 12px;
   }
 }
+
+/* ==========================================================================
+   FLOATING LINE OFFICIAL ACTION BUTTON
+   ========================================================================== */
+.floating-line-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 998;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #06c755;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 10px 25px rgba(6, 199, 85, 0.42), 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-line-btn:hover {
+  background-color: #05b34c;
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(6, 199, 85, 0.52), 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.floating-line-btn svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .floating-line-btn span {
+    display: none;
+  }
+  .floating-line-btn {
+    padding: 14px;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
